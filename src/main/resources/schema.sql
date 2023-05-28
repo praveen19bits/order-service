@@ -6,6 +6,7 @@ CREATE TABLE orders (
       book_price          float8,
       quantity            int NOT NULL,
       status              varchar(255) NOT NULL,
+      message             varchar(1024),
       created_date        timestamp NOT NULL,
       last_modified_date  timestamp NOT NULL,
       version             integer NOT NULL

@@ -1,8 +1,6 @@
 # Order Service
 
 This application is part of the Bookshop system and provides the functionality for ordering books.
-It's part of the project built in the [Cloud Native Spring in Action](https://www.manning.com/books/cloud-native-spring-in-action) book
-by [Thomas Vitale](https://www.thomasvitale.com).
 
 ## REST API
 

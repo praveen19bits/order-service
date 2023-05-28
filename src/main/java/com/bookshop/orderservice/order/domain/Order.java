@@ -20,6 +20,8 @@ public record Order (
 	Integer quantity,
 	OrderStatus status,
 
+	String message,
+
 	@CreatedDate
 	Instant createdDate,
 
@@ -30,8 +32,8 @@ public record Order (
 	int version
 ){
 
-	public static Order of(String bookIsbn, String bookName, Double bookPrice, Integer quantity, OrderStatus status) {
-		return new Order(null, bookIsbn, bookName, bookPrice, quantity, status, null, null, 0);
+	public static Order of(String bookIsbn, String bookName, Double bookPrice, Integer quantity, OrderStatus status, String message) {
+		return new Order(null, bookIsbn, bookName, bookPrice, quantity, status, message,null, null, 0);
 	}
 
 }
