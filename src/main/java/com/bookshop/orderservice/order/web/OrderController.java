@@ -12,9 +12,15 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 @RestController
 @RequestMapping("/v1/orders")
+
 public class OrderController {
+
+	private static final Logger log = LoggerFactory.getLogger(OrderController.class);
 
 	private final OrderService orderService;
 
@@ -24,6 +30,8 @@ public class OrderController {
 
 	@GetMapping
 	public Flux<Order> getAllOrders() {
+
+		log.info("Fetching the list of orders ...");
 		return orderService.getAllOrders();
 	}
 
